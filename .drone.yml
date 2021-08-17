@@ -10,7 +10,7 @@ steps:
       GOOS: linux
       GOARCH: amd64
     
-    when:
-     status:
-     - failure
-     - success
+  - name: notify
+    image: plugins/slack
+    settings:
+      webhook: https://hooks.slack.com/services/...
