@@ -6,9 +6,4 @@ platform:
   arch: amd64
   os: linux
 
-steps:
-- name: backend
-  image: golang
-  environment:
-    GOOS: linux
-    GOARCH: amd64
+
