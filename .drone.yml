@@ -5,5 +5,7 @@ name: linux-amd64
 platform:
   arch: amd64
   os: linux
-
+steps:
+- name: test
+  image: golang:1.14.4
 
