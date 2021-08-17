@@ -6,6 +6,7 @@ name: default
 steps:
   - name: lint
     image: python:3.7-alpine
+    failure: ignore
     environment:
       GOOS: linux
       GOARCH: amd64
