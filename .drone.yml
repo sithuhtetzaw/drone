@@ -9,6 +9,8 @@ steps:
     environment:
       GOOS: linux
       GOARCH: amd64
-    commands:
-      - python -m pip install -r requirements.txt
-      - flake8
+    
+  - name: notify
+    image: plugins/slack
+    settings:
+    webhook: https://hooks.slack.com/services/...
