@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: download  
+- name: download_using_secret  
   image: plugins/download
   settings:
     username:
