@@ -3,10 +3,7 @@ kind: pipeline
 type: docker
 name: default
 
-steps:
- 
-  - name: notify
- 	  image: plugins/slack
- 	  settings:
-   	webhook: https://hooks.slack.com/services/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
+platform:
+ arch: amd64
+ os: linux
     
