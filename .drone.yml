@@ -20,4 +20,8 @@ steps:
   image: plugins/slack
   settings:
     webhook: https://hooks.slack.com/services/...
+    when:
+    status:
+    - failure
+    - success
 
