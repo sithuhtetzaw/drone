@@ -4,7 +4,7 @@ name: default
 steps:
 - name: cache
   image: redis
-  detach: true
+  detach: false
 
 - name: ping
   image: redis
