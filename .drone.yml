@@ -5,6 +5,7 @@ name: default
 steps:
   - name: host_error
     image: redis
+    detach: true
     commands:
     - redis-cli -h cache ping
 
