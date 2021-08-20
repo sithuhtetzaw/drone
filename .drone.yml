@@ -2,11 +2,8 @@ kind: pipeline
 name: default
 
 steps:
-- name: cache
-  image: redis
-  detach: true
+- name: install
+  image: composer
 
-- name: host_error
-  image: redis
-  commands:
-  - redis-cli -h cache ping
+- name: test
+  image: php:7
