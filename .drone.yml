@@ -3,9 +3,10 @@ name: default
 
 steps:
 - name: build
-  image: alpine
-  environment:
-    USERNAME:
+  image: plugins/docker
+  settings:
+    repo: sithuhtetzaw/drone
+    username:
       from_secret: docker_username
-    PASSWORD:
+    password:
       from_secret: docker_password
