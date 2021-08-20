@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: build
+- name: encrypted_secret
   image: alpine
   environment:
     USERNAME:
