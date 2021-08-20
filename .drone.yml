@@ -2,8 +2,10 @@ kind: pipeline
 name: default
 
 steps:
-- name: install
-  image: composer
-
-- name: test
-  image: php:7
+- name: build
+  image: alpine
+  environment:
+    USERNAME:
+      from_secret: docker_username
+    PASSWORD:
+      from_secret: docker_password
