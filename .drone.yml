@@ -1,14 +1,26 @@
 ---
 kind: pipeline
 type: docker
-name: default
-
+name: linux-amd64
+platform:
+ arch: amd64
+ os: linux
+    
 steps:
-- name: build
-  image: alphine
+- name: test
+  image: golang:1.14.4
+  failure : ignore
+  environment:
+    GOOS: linux
+    GOARCH: amd64
+   
+- name: notify
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/...
 
----
-kind: signature
-hmac: F10E2821BBBEA527EA02200352313BC059445190
-
-...
+trigger:
+  event:
+  - promote
+  target:
+  - production
