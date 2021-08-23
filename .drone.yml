@@ -3,7 +3,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: build
+- name: AWS_secrets_ref_build
   image: alpine
   environment:
     USERNAME:
