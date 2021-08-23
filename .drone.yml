@@ -5,11 +5,6 @@ name: default
 steps:
 - name: build
   image: alpine
-  environment:
-    USERNAME:
-      from_secret: username
-    PASSWORD:
-      from_secret: password
 
 ---
 kind: secret
@@ -24,5 +19,4 @@ name: password
 get:
   path: prod/docker
   name: password
-
 ...
