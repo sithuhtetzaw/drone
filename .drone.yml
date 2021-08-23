@@ -19,8 +19,8 @@ steps:
   settings:
     webhook: https://hooks.slack.com/services/...
 
-trigger:
-  event:
-  - promote
-  target:
-  - production
+  trigger:
+     event:
+       - promote
+     target:
+       - production
