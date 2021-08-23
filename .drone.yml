@@ -5,24 +5,4 @@ name: default
 steps:
 - name: AWS_secrets_ref_build
   image: alpine
-  environment:
-    USERNAME:
-      from_secret: username
-    PASSWORD:
-      from_secret: password
-
----
-kind: secret
-name: username
-get:
-  path: prod/docker
-  name: username
-
----
-kind: secret
-name: password
-get:
-  path: prod/docker
-  name: password
-
-...
+  
