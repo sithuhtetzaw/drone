@@ -1,8 +1,17 @@
 ---
 kind: pipeline
+type: docker
 name: default
 
 steps:
-- name: AWS_secrets_ref_build
-  image: alpine
-  
+- name: build
+  image: golang
+  commands:
+  - go build
+  - go test
+
+---
+kind: signature
+hmac: F10E2821BBBEA527EA02200352313BC059445190
+
+...
