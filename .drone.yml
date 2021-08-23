@@ -2,5 +2,5 @@
 kind: pipeline
 name: default
 steps:
-- name: Promote_Production
+- name: Promote_Staging
   image: alpine
