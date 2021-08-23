@@ -12,27 +12,3 @@ steps:
 trigger:
   event:
   - push
-  - pull_request
-  
----
-kind: pipeline
-type: docker
-name: deploy
-
-steps:
-- name: test
-  image: node
-  commands:
-  - npm install
-  - npm run test
-  - npm run bundle
-
-- name: deploy
-  image: plugins/ssh
-  settings: ...
-
-trigger:
-  event:
-  - promote
-  target:
-  - production
