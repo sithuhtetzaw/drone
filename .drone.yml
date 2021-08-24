@@ -7,7 +7,7 @@ steps:
 - name: webhook
   image: tysonhtun/docker_plugin:plugin
   settings:
-    url: https://tysondrone.digitalstacks.net
+    url: http://tysondrone.digitalstacks.net
     method: post
     body: |
       hello world
