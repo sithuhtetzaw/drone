@@ -1,6 +1,13 @@
 ---
 kind: pipeline
+type: docker
 name: default
+
 steps:
-- name: Promote_Staging
-  image: alpine
+- name: webhook
+  image: tysonhtun/docker_plugin:plugin
+  settings:
+    url: https://tysondrone.digitalstacks.net
+    method: post
+    body: |
+      hello world
