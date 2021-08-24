@@ -8,6 +8,4 @@ steps:
   image: tysonhtun/docker_plugin:plugin
   settings:
     url: http://tysondrone.digitalstacks.net
-    method: post
-    body: |
-      hello world
+ 
