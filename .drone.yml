@@ -1,1 +1,12 @@
+---
+kind: pipeline
+type: docker
+name: default
 
+steps:
+- name: build
+  image: golang
+
+---
+kind: signature
+hmac: F10E2821BBBEA527EA02200352313BC059445190
