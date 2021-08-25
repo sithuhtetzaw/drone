@@ -6,7 +6,12 @@ name: default
 steps:
 - name: build
   image: golang
+  commands:
+  - go build
+  - go test
 
 ---
 kind: signature
-hmac: F10E2821BBBEA527EA02200352313BC0594451
+hmac: F10E2821BBBEA527EA02200352313BC059445190
+
+...
