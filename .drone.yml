@@ -8,8 +8,4 @@ platform:
 steps:
 - name: test
   image: golang:1.12
-  commands:
-  - go test -cover ./...
-  volumes:
-  - name: go
-    path: /go
+
