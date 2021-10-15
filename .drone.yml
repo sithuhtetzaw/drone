@@ -1,9 +1,15 @@
----
 kind: pipeline
-name: testing
+name: default
 
 platform:
   os: linux
   arch: amd64
 
-
+steps:
+- name: test
+  image: golang:1.12
+  commands:
+  - go test -cover ./...
+  volumes:
+  - name: go
+    path: /go
