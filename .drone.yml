@@ -1,7 +1,17 @@
-interface Resource {
-  kind: string;
-  type: string;
-  name: string;
-  concurrency: Concurrency;
-  depends_on: string[];
-}
+---
+kind: pipeline
+name: testing
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: vet
+  pull: always
+  image: golang:1.16
+  commands:
+  - make vet
+  volumes:
+  - name: gopath
+    path: /go
